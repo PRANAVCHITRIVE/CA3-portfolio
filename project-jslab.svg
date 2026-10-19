@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="#0b0f19"/>
+  <!-- Window Header -->
+  <rect width="600" height="42" rx="16" fill="#131b2e"/>
+  <circle cx="28" cy="21" r="6" fill="#ef4444"/>
+  <circle cx="48" cy="21" r="6" fill="#f59e0b"/>
+  <circle cx="68" cy="21" r="6" fill="#10b981"/>
+  <rect x="140" y="10" width="320" height="22" rx="6" fill="#1e293b"/>
+  <text x="300" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">https://pranav-portfolio.dev/js-lab</text>
+  
+  <!-- Dashboard Cards / Visual Content -->
+  <rect x="30" y="65" width="340" height="180" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+  <path d="M45,210 Q90,120 140,160 T230,110 T320,130 L350,210 Z" fill="url(#pGrad)" opacity="0.35"/>
+  <path d="M45,210 Q90,120 140,160 T230,110 T320,130" fill="none" stroke="#f59e0b" stroke-width="3.5"/>
+  <circle cx="140" cy="160" r="5" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="230" cy="110" r="5" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="320" cy="130" r="5" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  
+  <rect x="390" y="65" width="180" height="85" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="410" y="98" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Throughput</text>
+  <text x="410" y="130" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">99.98%</text>
+  
+  <rect x="390" y="160" width="180" height="85" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="410" y="193" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Response Time</text>
+  <text x="410" y="225" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">&lt; 42 ms</text>
+  
+  <!-- Bottom info bar -->
+  <rect x="30" y="265" width="540" height="65" rx="10" fill="#0f172a" stroke="#1e293b"/>
+  <text x="55" y="304" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">JavaScript Lab Interactive Suite</text>
+  <rect x="420" y="282" width="130" height="30" rx="15" fill="#f59e0b" fill-opacity="0.18"/>
+  <text x="485" y="302" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">CA3 EXCLUSIVE</text>
+</svg>

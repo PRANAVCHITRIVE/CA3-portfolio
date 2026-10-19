@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranav Chitrive — Software Engineer & B.Tech CSE Portfolio</title>
+  
+  <!-- SEO & Social Graph Meta Tags -->
+  <meta name="description" content="Official Engineering Portfolio of Pranav Chitrive, B.Tech Computer Science & Engineering student at Symbiosis Institute of Technology (SIT), Nagpur. Showcasing software engineering projects, academic excellence, technical skills, and research certifications." />
+  <meta name="keywords" content="Pranav Chitrive, Portfolio, Software Engineer, B.Tech CSE, SIT Nagpur, Full-Stack Developer, AI, Machine Learning, JavaScript Lab, Symbiosis International University, CA3 Mini Project" />
+  <meta name="author" content="Pranav Chitrive" />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pranav Chitrive — Software Engineer & B.Tech CSE Portfolio" />
+  <meta property="og:description" content="Digital Identity & Engineering Portfolio of Pranav Chitrive (PRN: 24070521084), SIT Nagpur." />
+  <meta property="og:image" content="assets/images/profile-avatar.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/profile-avatar.svg" />
+
+  <!-- Google Fonts: Outfit & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Interactive HTML5 Canvas Constellation Particles -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Cyber Aurora Background Ambient Glow Mesh -->
+  <div class="aurora-bg-mesh" aria-hidden="true"></div>
+
+  <!-- =================================================================
+       NAVIGATION BAR
+       ================================================================= -->
+  <header class="navbar" id="main-navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" title="Return to Top">
+        <div class="logo-badge">⚡</div>
+        <span class="logo-text" data-bind="profile-name">Pranav Chitrive</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#marks" class="nav-link">Academics</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#jslab-demo" class="nav-link">JS Lab</a></li>
+          <li><a href="#certificates" class="nav-link">Certificates</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Visitor IP Quick Pill -->
+        <button class="nav-ip-pill" id="nav-ip-badge" data-action="open-ip-inspector" title="Inspect your public IP & network diagnostics">
+          <span class="pulse-dot success"></span>
+          <span>Detecting IP...</span>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button class="icon-toggle-btn" id="theme-toggle-btn" title="Toggle Theme (Aurora / Cyber / Light)">
+          <span>🌙</span> <span class="btn-text">Aurora</span>
+        </button>
+
+        <!-- Web Audio Synth Toggle -->
+        <button class="icon-toggle-btn" id="audio-toggle-btn" title="Toggle Audio Sound Feedback">
+          <span>🔇</span> Audio
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =================================================================
+       HERO SECTION
+       ================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-status-pill">
+          <span class="pulse-dot success"></span>
+          <span data-bind="profile-status">Open to Summer 2026 Internships</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text" data-bind="profile-name">Pranav Chitrive</span>
+        </h1>
+
+        <div class="hero-typed-container">
+          <span class="typed-prefix">&gt;&nbsp;</span>
+          <span id="hero-typed-text">Full-Stack Software Engineer</span>
+          <span class="typed-cursor"></span>
+        </div>
+
+        <p class="hero-tagline" data-bind="profile-tagline">
+          Computer Science Engineering student at Symbiosis Institute of Technology, Nagpur.
+          Building scalable web architectures, intelligent systems, and modern digital experiences.
+        </p>
+
+        <!-- Prominent Hero Actions -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            <span>🚀 Explore Projects</span>
+          </a>
+          <button class="btn-secondary" data-action="open-resume">
+            <span>📄 View Resume / CV</span>
+          </button>
+          <button class="btn-outline" data-action="open-ip-inspector">
+            <span>🔍 Inspect Visitor IP</span>
+          </button>
+        </div>
+
+        <!-- Hero IP Chip -->
+        <div class="hero-ip-chip" id="hero-ip-chip" data-action="open-ip-inspector" title="Click to view full network telemetry & location">
+          <span class="chip-flag">🌐</span>
+          <span class="chip-text">Visitor IP: <strong>Scanning...</strong></span>
+          <span class="chip-ping">Ping</span>
+        </div>
+      </div>
+
+      <!-- Hero Avatar Showcase with Cyber Aura Halo & Floating Badges -->
+      <div class="hero-avatar-wrapper">
+        <div class="hero-avatar-halo" aria-hidden="true"></div>
+        <div class="hero-avatar-card glass-card">
+          <img src="assets/images/profile-avatar.jpg" alt="Pranav Chitrive Portrait" class="hero-avatar-img" />
+        </div>
+        
+        <!-- Floating Badge 1: CGPA -->
+        <div class="hero-floating-badge hero-badge-1">
+          <span>⭐</span>
+          <div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">DEAN'S LIST</div>
+            <div style="color:var(--accent-emerald); font-weight:800;">CGPA: 9.32 / 10</div>
+          </div>
+        </div>
+
+        <!-- Floating Badge 2: LeetCode -->
+        <div class="hero-floating-badge hero-badge-2">
+          <span>⚡</span>
+          <div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">LEETCODE KNIGHT</div>
+            <div style="color:var(--accent-cyan); font-weight:800;">Rating 1940+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       STATS STRIP (Animated Counters)
+       ================================================================= -->
+  <section class="stats-strip" id="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="glass-card stat-item">
+          <div class="stat-num-wrapper">
+            <span class="stat-number" data-target="9.32" data-float="true">0</span><span>/10</span>
+          </div>
+          <div class="stat-label">Overall CGPA (B.Tech CSE)</div>
+        </div>
+
+        <div class="glass-card stat-item">
+          <div class="stat-num-wrapper">
+            <span class="stat-number" data-target="14">0</span><span>+</span>
+          </div>
+          <div class="stat-label">Engineered Web & AI Projects</div>
+        </div>
+
+        <div class="glass-card stat-item">
+          <div class="stat-num-wrapper">
+            <span class="stat-number" data-target="480">0</span><span>+</span>
+          </div>
+          <div class="stat-label">Algorithmic Problems Solved</div>
+        </div>
+
+        <div class="glass-card stat-item">
+          <div class="stat-num-wrapper">
+            <span class="stat-number" data-target="6">0</span>
+          </div>
+          <div class="stat-label">Professional Certifications</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       ABOUT ME SECTION
+       ================================================================= -->
+  <section class="section-wrapper" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">👤 Personal Introduction</div>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Bridging theoretical computer science with practical, high-throughput software engineering.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card about-card-main">
+          <p class="about-bio-text" data-bind="profile-bio">
+            I am a 3rd-year Computer Science Engineering student passionate about crafting high-performance full-stack web applications, distributed backend services, and practical AI applications. With a strong foundation in data structures, algorithms, and modern JavaScript architectures, I enjoy turning complex computational ideas into intuitive, elegant digital products.
+          </p>
+
+          <div class="about-details-table">
+            <div class="about-detail-row">
+              <span class="about-detail-label">PRN / Roll Number</span>
+              <span class="about-detail-val" data-bind="profile-prn">24070521084</span>
+            </div>
+
+            <div class="about-detail-row">
+              <span class="about-detail-label">Degree & Term</span>
+              <span class="about-detail-val">B.Tech CSE (Sem V)</span>
+            </div>
+
+            <div class="about-detail-row">
+              <span class="about-detail-label">Institution</span>
+              <span class="about-detail-val" data-bind="profile-institution">SIT, Nagpur (SIU)</span>
+            </div>
+
+            <div class="about-detail-row">
+              <span class="about-detail-label">Base Location</span>
+              <span class="about-detail-val">Nagpur, Maharashtra, India</span>
+            </div>
+
+            <div class="about-detail-row">
+              <span class="about-detail-label">Direct Email</span>
+              <a href="mailto:pranav.chitrive.btech2024@sitnagpur.siu.edu.in" class="about-detail-val" data-bind="profile-email">
+                pranav.chitrive.btech2024@sitnagpur.siu.edu.in
+              </a>
+            </div>
+
+            <div class="about-detail-row">
+              <span class="about-detail-label">Contact Phone</span>
+              <span class="about-detail-val" data-bind="profile-phone">+91 98765 43210</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-facts-grid">
+          <div class="glass-card quick-fact-card">
+            <span class="fact-icon">🎓</span>
+            <div>
+              <div class="fact-label">Academic Specialization</div>
+              <div class="fact-val">Full-Stack Architectures & Applied AI</div>
+            </div>
+          </div>
+
+          <div class="glass-card quick-fact-card">
+            <span class="fact-icon">⚡</span>
+            <div>
+              <div class="fact-label">Primary Technology Stack</div>
+              <div class="fact-val">JavaScript (ES6+), React, Node.js, Python, PostgreSQL</div>
+            </div>
+          </div>
+
+          <div class="glass-card quick-fact-card">
+            <span class="fact-icon">🏆</span>
+            <div>
+              <div class="fact-label">Hackathon Milestone</div>
+              <div class="fact-val">1st Place @ Smart India Hackathon (College Internal 2025)</div>
+            </div>
+          </div>
+
+          <div class="glass-card quick-fact-card">
+            <span class="fact-icon">🌐</span>
+            <div>
+              <div class="fact-label">Leadership & Clubs</div>
+              <div class="fact-val">Technical Lead @ GDSC SIT Nagpur Chapter</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       EDUCATIONAL DETAILS (Interactive Timeline)
+       ================================================================= -->
+  <section class="section-wrapper" id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">🎓 Educational Qualifications</div>
+        <h2 class="section-title">Academic <span class="gradient-text">Journey</span></h2>
+        <p class="section-subtitle">Consistent academic distinction and foundational computer science coursework.</p>
+      </div>
+
+      <div class="timeline-container" id="education-timeline">
+        <!-- Rendered dynamically by js/projects-gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       ACADEMIC PERFORMANCE & MARKS
+       ================================================================= -->
+  <section class="section-wrapper" id="marks">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">📚 Academic Performance & Marks</div>
+        <h2 class="section-title">Semester-wise <span class="gradient-text">SGPA Progression</span></h2>
+        <p class="section-subtitle">Detailed credit evaluations and distinction marks across completed university semesters.</p>
+      </div>
+
+      <div class="marks-layout">
+        <div class="semesters-grid" id="academic-semesters-grid">
+          <!-- Rendered dynamically with SVG Radial Gauges by js/projects-gallery.js -->
+        </div>
+
+        <div>
+          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:1rem; text-align:center;">
+            🌟 Key Subject Academic Distinctions
+          </h3>
+          <div class="academic-highlights-container" id="academic-highlights-list">
+            <!-- Rendered dynamically by js/projects-gallery.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       TECHNICAL SKILLS SECTION
+       ================================================================= -->
+  <section class="section-wrapper" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">💻 Technical Capabilities</div>
+        <h2 class="section-title">Skills & <span class="gradient-text">Proficiencies</span></h2>
+        <p class="section-subtitle">Comprehensive toolkit spanning frontend engineering, systems programming, databases, and DevOps.</p>
+      </div>
+
+      <div class="skills-grid" id="skills-container">
+        <!-- Rendered dynamically by js/projects-gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       PROJECTS SHOWCASE (Filterable & 3D Tilt Cards)
+       ================================================================= -->
+  <section class="section-wrapper" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">🚀 Engineering Projects</div>
+        <h2 class="section-title">Featured <span class="gradient-text">Works</span></h2>
+        <p class="section-subtitle">Real-world applications engineered with architectural discipline and modern UI aesthetics.</p>
+      </div>
+
+      <!-- Project Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn proj-filter-btn active" data-filter="All">All Projects</button>
+        <button class="filter-btn proj-filter-btn" data-filter="Full-Stack">Full-Stack & Cloud</button>
+        <button class="filter-btn proj-filter-btn" data-filter="AI">AI & Machine Learning</button>
+        <button class="filter-btn proj-filter-btn" data-filter="IoT">IoT & Systems</button>
+        <button class="filter-btn proj-filter-btn" data-filter="JavaScript">Web & JS Lab</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered dynamically with 3D tilt by js/projects-gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       JS LAB INTERACTIVE PRACTICALS PLAYGROUND
+       ================================================================= -->
+  <section class="section-wrapper" id="jslab-demo">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">🔬 Curriculum Showcase</div>
+        <h2 class="section-title">JavaScript Lab <span class="gradient-text">Live Practicals</span></h2>
+        <p class="section-subtitle">
+          Interactive execution suite highlighting practical implementations of university syllabus experiments (Course Code: T-3013).
+        </p>
+      </div>
+
+      <div class="glass-card lab-playground-card">
+        <!-- Tab Navigation -->
+        <div class="lab-tabs-nav">
+          <button class="lab-tab-btn active" data-tab="tab-exp-palindrome">Exp 4 & 6: Palindrome & Regex</button>
+          <button class="lab-tab-btn" data-tab="tab-exp-cart">Exp 2 & 5: Cart & GST Invoice</button>
+          <button class="lab-tab-btn" data-tab="tab-exp-storage">Exp 9: LocalStorage Explorer</button>
+          <button class="lab-tab-btn" data-tab="tab-exp-json">Exp 10: Dynamic JSON Loader</button>
+        </div>
+
+        <!-- Tab 1: Palindrome & Regex Tokenizer -->
+        <div class="lab-tab-content active" id="tab-exp-palindrome">
+          <div class="lab-tool-grid">
+            <div class="lab-tool-inputs">
+              <div class="lab-input-group">
+                <label for="lab-palindrome-input">Enter Text or Phrase to Evaluate:</label>
+                <input type="text" id="lab-palindrome-input" value="A man, a plan, a canal: Panama" placeholder="e.g. racecar or madam..." />
+              </div>
+              <button class="btn-primary" id="lab-palindrome-btn">
+                <span>⚡ Evaluate Palindrome & Regex</span>
+              </button>
+            </div>
+            <div class="lab-output-box" id="lab-palindrome-result">
+              <div class="eval-box success">
+                <div class="eval-badge">✅ PALINDROME DETECTED</div>
+                <div class="eval-row"><span>Original:</span> <code>"A man, a plan, a canal: Panama"</code></div>
+                <div class="eval-row"><span>Regex Clean (/[^a-z0-9]/g):</span> <code>"amanaplanacanalpanama"</code></div>
+                <div class="eval-row"><span>Reversed:</span> <code>"amanaplanacanalpanama"</code></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Cart & Billing Invoice Generator -->
+        <div class="lab-tab-content" id="tab-exp-cart">
+          <div class="lab-tool-grid">
+            <div class="lab-tool-inputs">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div class="lab-input-group">
+                  <label for="item1-price">Item 1 Price (₹)</label>
+                  <input type="number" id="item1-price" value="1200" />
+                </div>
+                <div class="lab-input-group">
+                  <label for="item1-qty">Item 1 Quantity</label>
+                  <input type="number" id="item1-qty" value="2" />
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div class="lab-input-group">
+                  <label for="item2-price">Item 2 Price (₹)</label>
+                  <input type="number" id="item2-price" value="850" />
+                </div>
+                <div class="lab-input-group">
+                  <label for="item2-qty">Item 2 Quantity</label>
+                  <input type="number" id="item2-qty" value="1" />
+                </div>
+              </div>
+
+              <div class="lab-input-group">
+                <label for="cart-discount">Discount Percentage (%)</label>
+                <input type="number" id="cart-discount" value="10" />
+              </div>
+
+              <button class="btn-primary" id="lab-calc-cart-btn">
+                <span>🧾 Compute Tax Invoice with GST</span>
+              </button>
+            </div>
+
+            <div class="lab-output-box" id="lab-cart-result">
+              <div class="invoice-box">
+                <div class="inv-header">🧾 Tax Invoice / Lab Exp 2 & 5</div>
+                <div class="inv-row"><span>Subtotal (Items 1 + 2):</span> <strong>₹3250.00</strong></div>
+                <div class="inv-row"><span>Discount (10%):</span> <strong class="discount">- ₹325.00</strong></div>
+                <div class="inv-row"><span>Taxable Value:</span> <strong>₹2925.00</strong></div>
+                <div class="inv-row"><span>GST @ 18% (CGST 9% + SGST 9%):</span> <strong>+ ₹526.50</strong></div>
+                <div class="inv-row total"><span>Grand Invoice Total:</span> <strong class="highlight">₹3451.50</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: LocalStorage Explorer -->
+        <div class="lab-tab-content" id="tab-exp-storage">
+          <div class="lab-tool-grid">
+            <div class="lab-tool-inputs">
+              <div class="lab-input-group">
+                <label for="lab-storage-key">Storage Key Name</label>
+                <input type="text" id="lab-storage-key" placeholder="e.g. user_session_token" />
+              </div>
+              <div class="lab-input-group">
+                <label for="lab-storage-val">Storage Value</label>
+                <input type="text" id="lab-storage-val" placeholder="e.g. sit_nagpur_cse_2026" />
+              </div>
+              <div style="display:flex; gap:0.75rem;">
+                <button class="btn-primary" id="lab-storage-save" style="flex:1;">
+                  <span>💾 Set Key-Value</span>
+                </button>
+                <button class="btn-secondary" id="lab-storage-clear" style="flex:1;">
+                  <span>🗑️ Clear Storage</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="lab-output-box" id="lab-storage-display">
+              <!-- Dynamically populated storage table -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Dynamic JSON Loader Simulation -->
+        <div class="lab-tab-content" id="tab-exp-json">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+            <div>
+              <h4 style="font-size:1.1rem; font-weight:700;">Asynchronous Promise & Fetch Dispatch</h4>
+              <p style="font-size:0.85rem; color:var(--text-secondary);">Demonstrates <code>async/await</code> and DOM population from mock JSON data.</p>
+            </div>
+            <button class="btn-primary" id="lab-json-load-btn">
+              <span>🔄 Execute Async JSON Fetch</span>
+            </button>
+          </div>
+          <div class="lab-output-box" id="lab-json-table-output" style="min-height:180px;">
+            <div style="text-align:center; color:var(--text-muted);">Click "Execute Async JSON Fetch" to simulate an API request.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       CERTIFICATES SECTION
+       ================================================================= -->
+  <section class="section-wrapper" id="certificates">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">📜 Professional Certifications</div>
+        <h2 class="section-title">Verified <span class="gradient-text">Credentials</span></h2>
+        <p class="section-subtitle">Industry recognized certifications across cloud architecture, machine learning, and full-stack development.</p>
+      </div>
+
+      <div class="certificates-grid" id="certificates-grid">
+        <!-- Rendered dynamically by js/projects-gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       ACHIEVEMENTS & HONORS
+       ================================================================= -->
+  <section class="section-wrapper" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">🏆 Honors & Accolades</div>
+        <h2 class="section-title">Awards & <span class="gradient-text">Achievements</span></h2>
+        <p class="section-subtitle">National hackathons, competitive programming milestones, and university merit lists.</p>
+      </div>
+
+      <div class="achievements-grid" id="achievements-grid">
+        <!-- Rendered dynamically by js/projects-gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       CAREER INTERESTS & PROFESSIONAL DETAILS
+       ================================================================= -->
+  <section class="section-wrapper" id="career">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">💼 Professional Directions</div>
+        <h2 class="section-title">Career <span class="gradient-text">Interests</span></h2>
+        <p class="section-subtitle">Target technical roles, operational domains, and engineering environments.</p>
+      </div>
+
+      <div class="career-interests-grid" id="career-interests-grid">
+        <!-- Rendered dynamically by js/projects-gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       CONTRIBUTIONS & LEADERSHIP
+       ================================================================= -->
+  <section class="section-wrapper" id="contributions">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">🤝 Community & Leadership</div>
+        <h2 class="section-title">Extracurricular <span class="gradient-text">Contributions</span></h2>
+        <p class="section-subtitle">Student chapter leadership, technical event organization, and open source mentorship.</p>
+      </div>
+
+      <div class="contributions-grid" id="contributions-grid">
+        <!-- Rendered dynamically by js/projects-gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       PHOTO GALLERY (ACADEMIC & PROFESSIONAL)
+       ================================================================= -->
+  <section class="section-wrapper" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">📸 Visual Moments</div>
+        <h2 class="section-title">Activities <span class="gradient-text">Gallery</span></h2>
+        <p class="section-subtitle">Snapshots of hackathon sprints, technical symposiums, and collaborative lab sessions.</p>
+      </div>
+
+      <!-- Gallery Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn gallery-filter-btn active" data-filter="All">All Photos</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Hackathons">Hackathons</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Symposium">Symposium</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Workshops">Workshops</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered dynamically by js/projects-gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       CONTACT SECTION
+       ================================================================= -->
+  <section class="section-wrapper" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">📞 Direct Channels</div>
+        <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">Feel free to connect for software engineering opportunities, internships, or academic collaboration.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Information Cards -->
+        <div class="contact-info-panel">
+          <div class="glass-card contact-method-card">
+            <div class="method-icon">📧</div>
+            <div>
+              <div class="method-title">University Official Email</div>
+              <a href="mailto:pranav.chitrive.btech2024@sitnagpur.siu.edu.in" class="method-val" data-bind="profile-email">
+                pranav.chitrive.btech2024@sitnagpur.siu.edu.in
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card contact-method-card">
+            <div class="method-icon">📱</div>
+            <div>
+              <div class="method-title">Phone & WhatsApp</div>
+              <a href="tel:+919876543210" class="method-val" data-bind="profile-phone">
+                +91 98765 43210
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card contact-method-card">
+            <div class="method-icon">📍</div>
+            <div>
+              <div class="method-title">Campus & Department</div>
+              <div class="method-val">Symbiosis Institute of Technology, Wathoda, Nagpur</div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <div style="font-size:0.85rem; font-weight:600; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.85rem;">
+              Professional Social Profiles
+            </div>
+            <div class="contact-social-row">
+              <a href="https://github.com/pranavchitrive" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="GitHub" data-bind="link-github">
+                🐙
+              </a>
+              <a href="https://linkedin.com/in/pranavchitrive" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="LinkedIn" data-bind="link-linkedin">
+                💼
+              </a>
+              <a href="https://leetcode.com/pranavchitrive" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="LeetCode" data-bind="link-leetcode">
+                ⚡
+              </a>
+              <a href="https://twitter.com/pranav_dev" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Twitter / X" data-bind="link-twitter">
+                🐦
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <button class="btn-outline" id="btn-copy-email" style="width:100%;">
+              <span>📋 Copy Official Email</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Validated Contact Dispatch Form -->
+        <div class="glass-card contact-form-card">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name">Your Full Name *</label>
+              <input type="text" id="contact-name" placeholder="e.g. Dr. Sachin Harne / Recruiter Name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Your Work or Personal Email *</label>
+              <input type="email" id="contact-email" placeholder="e.g. recruiter@company.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Inquiry Subject</label>
+              <input type="text" id="contact-subject" placeholder="e.g. Summer 2026 Software Internship / CA3 Evaluation" />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message Content *</label>
+              <textarea id="contact-message" rows="4" maxlength="500" placeholder="Type your message or project evaluation comments here..." required></textarea>
+              <div class="char-counter" id="message-char-count">0 / 500</div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%;">
+              <span>📤 Dispatch Inquiry Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SITE FOOTER
+       ================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <div style="font-weight:700; font-size:1.05rem; margin-bottom:0.25rem;">
+          <span data-bind="profile-name">Pranav Chitrive</span> — Digital Identity & Portfolio
+        </div>
+        <div class="footer-copy">
+          B.Tech Computer Science & Engineering (PRN: <span data-bind="profile-prn">24070521084</span>) • Symbiosis Institute of Technology, Nagpur
+        </div>
+      </div>
+
+      <div class="footer-badge">
+        <span>⚡ JavaScript Lab CA3 Mini Project (5 Marks Evaluation)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================================================================
+       MODAL 1: VISITOR NETWORK & IP INSPECTOR
+       ================================================================= -->
+  <div class="modal-container" id="ip-inspector-modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog ip-terminal-dialog" id="ip-inspector-body">
+      <!-- Dynamically populated by js/ip-inspector.js -->
+    </div>
+  </div>
+
+  <!-- =================================================================
+       MODAL 2: PROJECT DEEP DIVE MODAL
+       ================================================================= -->
+  <div class="modal-container" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog project-modal-dialog glass-card">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <span class="modal-icon">🚀</span>
+          <h3>Engineering Project Deep Dive</h3>
+        </div>
+        <button class="modal-close-btn" title="Close Modal">&times;</button>
+      </div>
+      <div id="project-modal-body">
+        <!-- Dynamically populated by js/projects-gallery.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       MODAL 3: LIGHTBOX (CERTIFICATES & GALLERY)
+       ================================================================= -->
+  <div class="modal-container" id="lightbox-modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog lightbox-dialog glass-card">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <span class="modal-icon">🔍</span>
+          <h3>Credential & Activity Lightbox</h3>
+        </div>
+        <button class="modal-close-btn" title="Close Lightbox">&times;</button>
+      </div>
+      <div class="modal-body" id="lightbox-body">
+        <!-- Dynamically populated by js/projects-gallery.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       MODAL 4: IN-BROWSER PROFILE CUSTOMIZER
+       ================================================================= -->
+  <div class="modal-container" id="profile-customizer-modal" role="dialog" aria-modal="true">
+    <!-- Dynamically populated by js/profile-customizer.js -->
+  </div>
+
+  <!-- =================================================================
+       MODAL 5: DOWNLOADABLE / PRINTABLE RESUME PREVIEW
+       ================================================================= -->
+  <div class="modal-container" id="resume-modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog glass-card" style="max-width:780px;">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <span class="modal-icon">📄</span>
+          <h3>Curriculum Vitae Preview & Export</h3>
+        </div>
+        <button class="modal-close-btn" id="btn-close-resume">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="border-bottom:1px solid var(--border-glass); padding-bottom:1.25rem; margin-bottom:1.5rem;">
+          <h2 style="font-size:1.75rem; font-weight:800;" data-bind="profile-name">Pranav Chitrive</h2>
+          <div style="color:var(--accent-cyan); font-weight:600; font-size:1rem; margin-bottom:0.5rem;" data-bind="profile-role">
+            Full-Stack Software Engineer & B.Tech CSE Student
+          </div>
+          <div style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
+            PRN: <strong>24070521084</strong> • SIT Nagpur (SIU) • CGPA: <strong>9.32/10.0</strong><br />
+            Email: <span data-bind="profile-email">pranav.chitrive.btech2024@sitnagpur.siu.edu.in</span> • Phone: <span data-bind="profile-phone">+91 98765 43210</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h4 style="font-size:1rem; color:var(--accent-cyan); font-weight:700; text-transform:uppercase; margin-bottom:0.4rem;">
+            Executive Summary
+          </h4>
+          <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6;" data-bind="profile-bio">
+            I am a 3rd-year Computer Science Engineering student passionate about crafting high-performance full-stack web applications, distributed backend services, and practical AI applications.
+          </p>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h4 style="font-size:1rem; color:var(--accent-cyan); font-weight:700; text-transform:uppercase; margin-bottom:0.4rem;">
+            Core Technical Skills
+          </h4>
+          <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6;">
+            <strong>Languages:</strong> JavaScript (ES6+), Python 3, C++, TypeScript, SQL<br />
+            <strong>Frontend:</strong> React.js, Next.js, HTML5, CSS3 Glassmorphism, Canvas API, DOM Manipulation<br />
+            <strong>Backend & DBs:</strong> Node.js, Express, REST APIs, PostgreSQL, MongoDB, Redis, Docker, AWS
+          </p>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; padding-top:1.25rem; border-top:1px solid var(--border-glass);">
+          <span style="font-size:0.85rem; color:var(--text-muted);">
+            🖨️ Ready for ATS export or direct PDF generation via browser print.
+          </span>
+          <button class="btn-primary" id="btn-print-resume">
+            <span>🖨️ Print / Save as PDF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       DRAWER: VIVA VOCE CHEAT SHEET & EVALUATION HELPER
+       ================================================================= -->
+  <div class="drawer-container" id="viva-drawer" role="dialog" aria-modal="true">
+    <div class="drawer-backdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div style="display:flex; align-items:center; gap:0.65rem;">
+          <span style="font-size:1.5rem;">🗣️</span>
+          <div>
+            <h3>Viva Voce Preparation Helper</h3>
+            <div style="font-size:0.78rem; color:var(--accent-cyan);">Course Evaluation: 2.0 Marks Weightage</div>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="btn-close-viva-drawer">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <div class="viva-criteria-card">
+          <div class="viva-criteria-title">📊 Evaluation Marking Scheme (5 Marks)</div>
+          <div style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
+            • <strong>Webpage / Portfolio:</strong> 2.5 Marks (Design, sections, responsive code)<br />
+            • <strong>Viva Voce:</strong> 2.0 Marks (Understanding of JavaScript mechanics)<br />
+            • <strong>GitHub Link:</strong> 0.5 Mark (Clean repo, README.md, deployment)
+          </div>
+        </div>
+
+        <div class="viva-qa-accordion">
+          <div class="viva-qa-item">
+            <div class="viva-q"><span>Q1:</span> How does the Visitor IP Inspector fetch public network details?</div>
+            <div class="viva-a">
+              It uses modern ES6 asynchronous <code>fetch()</code> with an <code>async/await</code> paradigm against public IP resolution APIs (<code>ipwho.is</code> and <code>ipapi.co</code>) with multi-endpoint fallback chaining and a client latency ping measurement using <code>performance.now()</code>.
+            </div>
+          </div>
+
+          <div class="viva-qa-item">
+            <div class="viva-q"><span>Q2:</span> How is theme state persisted across user sessions?</div>
+            <div class="viva-a">
+              Theme selection is stored in the browser's <code>localStorage</code> under key <code>'portfolio_theme'</code>. On DOM initialization, an IIFE reads this key and sets the <code>data-theme</code> attribute on <code>document.documentElement</code> to eliminate screen flickering.
+            </div>
+          </div>
+
+          <div class="viva-qa-item">
+            <div class="viva-q"><span>Q3:</span> How does the HTML5 Canvas particle system work without lagging?</div>
+            <div class="viva-a">
+              It leverages <code>window.requestAnimationFrame()</code> to synchronize rendering with the display's 60Hz/120Hz refresh rate. It pauses execution when <code>document.hidden</code> is true to conserve system resources. Mouse proximity repulsion is calculated using Cartesian distance formulas.
+            </div>
+          </div>
+
+          <div class="viva-qa-item">
+            <div class="viva-q"><span>Q4:</span> How does the contact form validate user inputs?</div>
+            <div class="viva-a">
+              It employs RFC 5322 compliant Regular Expressions (<code>/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/</code>) to validate email syntax before form submission, checks string length boundaries, and uses custom glassmorphic toast notifications instead of default browser alert boxes.
+            </div>
+          </div>
+
+          <div class="viva-qa-item">
+            <div class="viva-q"><span>Q5:</span> How do the 3D tilt effects on project cards function?</div>
+            <div class="viva-a">
+              A <code>mousemove</code> event listener reads the cursor's coordinates relative to <code>card.getBoundingClientRect()</code>, calculates offset percentages from the card center, and applies a dynamic CSS <code>transform: perspective(1000px) rotateX(...) rotateY(...)</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       FLOATING ACTION BUTTONS (Quick Access)
+       ================================================================= -->
+  <aside class="floating-actions-bar" aria-label="Quick Actions">
+    <button class="fab-btn" data-action="open-customizer" title="Edit Profile Details in Browser">
+      <span>⚙️</span>
+      <span>Edit Profile</span>
+    </button>
+    <button class="fab-btn viva" id="btn-open-viva-drawer" title="Open Viva Preparation Cheat Sheet (2 Marks)">
+      <span>🗣️</span>
+      <span>Viva Guide</span>
+    </button>
+  </aside>
+
+  <!-- =================================================================
+       SCRIPTS (Modular Vanilla ES6 Architecture)
+       ================================================================= -->
+  <script src="js/data.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/ip-inspector.js"></script>
+  <script src="js/projects-gallery.js"></script>
+  <script src="js/profile-customizer.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

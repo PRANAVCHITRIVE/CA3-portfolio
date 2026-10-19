@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="galGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="350" rx="16" fill="url(#galGrad)"/>
+  <g opacity="0.15">
+    <circle cx="100" cy="100" r="180" fill="#ffffff"/>
+    <circle cx="400" cy="300" r="140" fill="#ffffff"/>
+  </g>
+  <rect x="30" y="30" width="440" height="290" rx="12" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4"/>
+  
+  <!-- Campus / Activity Graphic -->
+  <g transform="translate(250, 150)">
+    <circle cx="0" cy="0" r="50" fill="#0f172a" stroke="#00f2fe" stroke-width="3"/>
+    <polygon points="-15,-20 25,0 -15,20" fill="#00f2fe"/>
+  </g>
+  <text x="250" y="245" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Hack-O-Week Sprint Showcase</text>
+  <text x="250" y="275" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">36-Hour Hackathon • Team Lead & Developer</text>
+  <text x="250" y="298" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Symbiosis Institute of Technology (SIT), Nagpur</text>
+</svg>
